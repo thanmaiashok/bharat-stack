@@ -1,0 +1,1 @@
+upi://pay?pa=demotraders@okaxis&pn=Demo%20Traders&am=499.00&cu=INR&tn=Order%201042

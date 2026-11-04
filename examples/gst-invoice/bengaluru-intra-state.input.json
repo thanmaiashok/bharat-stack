@@ -1,0 +1,40 @@
+{
+  "invoiceNo": "BS/2026-27/002",
+  "date": "05-11-2026",
+  "seller": {
+    "name": "Demo Traders Private Limited",
+    "gstin": "29QANCZ9267L1ZM",
+    "city": "Bengaluru"
+  },
+  "buyer": {
+    "name": "Local Client Pvt Ltd",
+    "gstin": "29NNPCP8505P1ZB",
+    "city": "Mysuru"
+  },
+  "items": [
+    {
+      "description": "Website maintenance (November)",
+      "hsn": "998314",
+      "quantity": 1,
+      "rate": 15000,
+      "gstRate": 18
+    },
+    {
+      "description": "Printed brochures",
+      "hsn": "4911",
+      "quantity": 500,
+      "rate": 6.4,
+      "gstRate": 18
+    },
+    {
+      "description": "Printed books",
+      "hsn": "4901",
+      "quantity": 3,
+      "rate": 350,
+      "gstRate": 0
+    }
+  ],
+  "upi": {
+    "vpa": "demotraders@okaxis"
+  }
+}

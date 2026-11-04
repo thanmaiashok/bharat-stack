@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "invoice": {
+    "schema": "bharat-stack/invoice@1",
+    "documentType": "TAX_INVOICE",
+    "invoiceNo": "BS/2026-27/002",
+    "date": "2026-11-05",
+    "dateIndian": "05-11-2026",
+    "financialYear": "2026-27",
+    "seller": {
+      "name": "Demo Traders Private Limited",
+      "gstin": "29QANCZ9267L1ZM",
+      "address": [],
+      "city": "Bengaluru",
+      "pincode": null,
+      "stateCode": "29",
+      "stateName": "Karnataka",
+      "phone": null,
+      "email": null,
+      "sez": false
+    },
+    "buyer": {
+      "name": "Local Client Pvt Ltd",
+      "gstin": "29NNPCP8505P1ZB",
+      "address": [],
+      "city": "Mysuru",
+      "pincode": null,
+      "stateCode": "29",
+      "stateName": "Karnataka",
+      "phone": null,
+      "email": null,
+      "sez": false
+    },
+    "placeOfSupply": {
+      "code": "29",
+      "name": "Karnataka"
+    },
+    "supplyType": "INTRA_STATE",
+    "stateTaxLabel": "SGST",
+    "reverseCharge": false,
+    "items": [
+      {
+        "sl": 1,
+        "description": "Website maintenance (November)",
+        "hsn": "998314",
+        "isService": true,
+        "quantity": 1,
+        "unit": "NOS",
+        "rate": 15000,
+        "gross": 15000,
+        "discount": 0,
+        "taxable": 15000,
+        "gstRate": 18,
+        "cgstRate": 9,
+        "sgstRate": 9,
+        "igstRate": 0,
+        "cgst": 1350,
+        "sgst": 1350,
+        "igst": 0,
+        "total": 17700
+      },
+      {
+        "sl": 2,
+        "description": "Printed brochures",
+        "hsn": "4911",
+        "isService": false,
+        "quantity": 500,
+        "unit": "NOS",
+        "rate": 6.4,
+        "gross": 3200,
+        "discount": 0,
+        "taxable": 3200,
+        "gstRate": 18,
+        "cgstRate": 9,
+        "sgstRate": 9,
+        "igstRate": 0,
+        "cgst": 288,
+        "sgst": 288,
+        "igst": 0,
+        "total": 3776
+      },
+      {
+        "sl": 3,
+        "description": "Printed books",
+        "hsn": "4901",
+        "isService": false,
+        "quantity": 3,
+        "unit": "NOS",
+        "rate": 350,
+        "gross": 1050,
+        "discount": 0,
+        "taxable": 1050,
+        "gstRate": 0,
+        "cgstRate": 0,
+        "sgstRate": 0,
+        "igstRate": 0,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 0,
+        "total": 1050
+      }
+    ],
+    "hsnSummary": [
+      {
+        "hsn": "998314",
+        "gstRate": 18,
+        "quantity": 1,
+        "taxable": 15000,
+        "cgst": 1350,
+        "sgst": 1350,
+        "igst": 0,
+        "totalTax": 2700
+      },
+      {
+        "hsn": "4911",
+        "gstRate": 18,
+        "quantity": 500,
+        "taxable": 3200,
+        "cgst": 288,
+        "sgst": 288,
+        "igst": 0,
+        "totalTax": 576
+      },
+      {
+        "hsn": "4901",
+        "gstRate": 0,
+        "quantity": 3,
+        "taxable": 1050,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 0,
+        "totalTax": 0
+      }
+    ],
+    "totals": {
+      "gross": 19250,
+      "discount": 0,
+      "taxable": 19250,
+      "cgst": 1638,
+      "sgst": 1638,
+      "igst": 0,
+      "totalTax": 3276,
+      "invoiceValue": 22526,
+      "roundOff": 0,
+      "amountPayable": 22526
+    },
+    "amountInWords": "Rupees Twenty-Two Thousand Five Hundred Twenty-Six Only",
+    "formatted": {
+      "amountPayable": "₹22,526.00",
+      "invoiceValue": "₹22,526.00",
+      "totalTax": "₹3,276.00"
+    },
+    "upi": {
+      "uri": "upi://pay?pa=demotraders@okaxis&pn=Demo%20Traders%20Private%20Limited&am=22526.00&cu=INR&tn=Invoice%20BS%2F2026-27%2F002&tr=BS%2F2026-27%2F002",
+      "vpa": "demotraders@okaxis",
+      "payeeName": "Demo Traders Private Limited",
+      "amount": "22526.00"
+    },
+    "bank": null,
+    "notes": null,
+    "terms": null,
+    "disclaimer": "Not tax/legal advice. Verify rates with official GST sources."
+  },
+  "errors": [],
+  "warnings": [],
+  "disclaimer": "Not tax/legal advice. Verify rates with official GST sources."
+}

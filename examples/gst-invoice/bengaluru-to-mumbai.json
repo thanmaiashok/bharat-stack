@@ -1,0 +1,176 @@
+{
+  "ok": true,
+  "invoice": {
+    "schema": "bharat-stack/invoice@1",
+    "documentType": "TAX_INVOICE",
+    "invoiceNo": "BS/2026-27/001",
+    "date": "2026-11-04",
+    "dateIndian": "04-11-2026",
+    "financialYear": "2026-27",
+    "seller": {
+      "name": "Demo Traders Private Limited",
+      "gstin": "29QANCZ9267L1ZM",
+      "address": [
+        "No. 12, 1st Cross, MG Road"
+      ],
+      "city": "Bengaluru",
+      "pincode": "560001",
+      "stateCode": "29",
+      "stateName": "Karnataka",
+      "phone": null,
+      "email": "accounts@example.com",
+      "sez": false
+    },
+    "buyer": {
+      "name": "Sample Buyer LLP",
+      "gstin": "27TIHCN8643U1ZC",
+      "address": [
+        "Unit 4, Example Industrial Estate, Andheri East"
+      ],
+      "city": "Mumbai",
+      "pincode": "400069",
+      "stateCode": "27",
+      "stateName": "Maharashtra",
+      "phone": null,
+      "email": null,
+      "sez": false
+    },
+    "placeOfSupply": {
+      "code": "27",
+      "name": "Maharashtra"
+    },
+    "supplyType": "INTER_STATE",
+    "stateTaxLabel": "SGST",
+    "reverseCharge": false,
+    "items": [
+      {
+        "sl": 1,
+        "description": "Aluminium laptop stand, adjustable height",
+        "hsn": "8473",
+        "isService": false,
+        "quantity": 2,
+        "unit": "NOS",
+        "rate": 1499,
+        "gross": 2998,
+        "discount": 0,
+        "taxable": 2998,
+        "gstRate": 18,
+        "cgstRate": 0,
+        "sgstRate": 0,
+        "igstRate": 18,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 539.64,
+        "total": 3537.64
+      },
+      {
+        "sl": 2,
+        "description": "USB-C to USB-C cable 1m",
+        "hsn": "8544",
+        "isService": false,
+        "quantity": 5,
+        "unit": "NOS",
+        "rate": 299.5,
+        "gross": 1497.5,
+        "discount": 149.75,
+        "taxable": 1347.75,
+        "gstRate": 18,
+        "cgstRate": 0,
+        "sgstRate": 0,
+        "igstRate": 18,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 242.6,
+        "total": 1590.35
+      },
+      {
+        "sl": 3,
+        "description": "On-site setup service",
+        "hsn": "998713",
+        "isService": true,
+        "quantity": 1.5,
+        "unit": "HRS",
+        "rate": 800,
+        "gross": 1200,
+        "discount": 0,
+        "taxable": 1200,
+        "gstRate": 18,
+        "cgstRate": 0,
+        "sgstRate": 0,
+        "igstRate": 18,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 216,
+        "total": 1416
+      }
+    ],
+    "hsnSummary": [
+      {
+        "hsn": "8473",
+        "gstRate": 18,
+        "quantity": 2,
+        "taxable": 2998,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 539.64,
+        "totalTax": 539.64
+      },
+      {
+        "hsn": "8544",
+        "gstRate": 18,
+        "quantity": 5,
+        "taxable": 1347.75,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 242.6,
+        "totalTax": 242.6
+      },
+      {
+        "hsn": "998713",
+        "gstRate": 18,
+        "quantity": 1.5,
+        "taxable": 1200,
+        "cgst": 0,
+        "sgst": 0,
+        "igst": 216,
+        "totalTax": 216
+      }
+    ],
+    "totals": {
+      "gross": 5695.5,
+      "discount": 149.75,
+      "taxable": 5545.75,
+      "cgst": 0,
+      "sgst": 0,
+      "igst": 998.24,
+      "totalTax": 998.24,
+      "invoiceValue": 6543.99,
+      "roundOff": 0.01,
+      "amountPayable": 6544
+    },
+    "amountInWords": "Rupees Six Thousand Five Hundred Forty-Four Only",
+    "formatted": {
+      "amountPayable": "₹6,544.00",
+      "invoiceValue": "₹6,543.99",
+      "totalTax": "₹998.24"
+    },
+    "upi": {
+      "uri": "upi://pay?pa=demotraders@okaxis&pn=Demo%20Traders%20Private%20Limited&am=6544.00&cu=INR&tn=Invoice%20BS%2F2026-27%2F001&tr=BS%2F2026-27%2F001",
+      "vpa": "demotraders@okaxis",
+      "payeeName": "Demo Traders Private Limited",
+      "amount": "6544.00"
+    },
+    "bank": {
+      "name": "Example Bank",
+      "accountName": "Demo Traders Pvt Ltd",
+      "accountNumber": "000000000000",
+      "ifsc": "EXMP0000001"
+    },
+    "notes": null,
+    "terms": "Payment due within 15 days.",
+    "disclaimer": "Not tax/legal advice. Verify rates with official GST sources."
+  },
+  "errors": [],
+  "warnings": [],
+  "disclaimer": "Not tax/legal advice. Verify rates with official GST sources."
+}

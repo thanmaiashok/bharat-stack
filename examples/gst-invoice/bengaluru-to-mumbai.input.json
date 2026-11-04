@@ -1,0 +1,60 @@
+{
+  "invoiceNo": "BS/2026-27/001",
+  "date": "04-11-2026",
+  "seller": {
+    "name": "Demo Traders Private Limited",
+    "gstin": "29QANCZ9267L1ZM",
+    "address": [
+      "No. 12, 1st Cross, MG Road"
+    ],
+    "city": "Bengaluru",
+    "pincode": "560001",
+    "email": "accounts@example.com"
+  },
+  "buyer": {
+    "name": "Sample Buyer LLP",
+    "gstin": "27TIHCN8643U1ZC",
+    "address": [
+      "Unit 4, Example Industrial Estate, Andheri East"
+    ],
+    "city": "Mumbai",
+    "pincode": "400069"
+  },
+  "items": [
+    {
+      "description": "Aluminium laptop stand, adjustable height",
+      "hsn": "8473",
+      "quantity": 2,
+      "rate": 1499,
+      "gstRate": 18
+    },
+    {
+      "description": "USB-C to USB-C cable 1m",
+      "hsn": "8544",
+      "quantity": 5,
+      "rate": 299.5,
+      "gstRate": 18,
+      "discount": {
+        "percent": 10
+      }
+    },
+    {
+      "description": "On-site setup service",
+      "hsn": "998713",
+      "quantity": 1.5,
+      "unit": "hrs",
+      "rate": 800,
+      "gstRate": 18
+    }
+  ],
+  "upi": {
+    "vpa": "demotraders@okaxis"
+  },
+  "bank": {
+    "name": "Example Bank",
+    "accountName": "Demo Traders Pvt Ltd",
+    "accountNumber": "000000000000",
+    "ifsc": "EXMP0000001"
+  },
+  "terms": "Payment due within 15 days."
+}

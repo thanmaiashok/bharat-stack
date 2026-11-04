@@ -2,7 +2,9 @@
 
 **India business toolkit for Claude & AI agents — GST invoices, UPI QR, Tally, e-invoice JSON. Offline. Open source.**
 
-> 🚧 Work in progress. Phase 1 (core formats + GSTIN/PAN) is done. Install instructions arrive with the plugin in Phase 5.
+> 🚧 Work in progress. Phases 1–2 are done: core formats, GSTIN/PAN, and the GST invoice engine with PDF + UPI QR. Install instructions arrive with the plugin in Phase 5.
+
+**See real output:** [inter-state invoice PDF](examples/gst-invoice/bengaluru-to-mumbai.pdf) (Bengaluru → Mumbai, IGST, UPI QR) · [intra-state PDF](examples/gst-invoice/bengaluru-intra-state.pdf) (CGST + SGST) · [invoice JSON](examples/gst-invoice/bengaluru-to-mumbai.json)
 
 ## What works today (`@bharat-stack/core`)
 
@@ -22,7 +24,7 @@
 
 - [x] P0 — Read current docs, agree structure ([decisions](docs/decisions.md))
 - [x] P1 — Core: Indian formats, GSTIN/PAN, state codes, tests
-- [ ] P2 — GST invoice engine + PDF + UPI QR
+- [x] P2 — GST invoice engine + PDF + UPI QR
 - [ ] P3 — Tally XML + e-invoice / e-way bill JSON
 - [ ] P4 — IFSC / pincode offline lookup
 - [ ] P5 — Skills + Claude Code plugin + marketplace
@@ -33,7 +35,8 @@
 
 ```bash
 pnpm install
-pnpm check   # lint + typecheck + tests with coverage
+pnpm check      # lint + typecheck + tests with coverage
+pnpm examples   # rebuild the files in examples/
 ```
 
 ## Disclaimer
