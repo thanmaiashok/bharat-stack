@@ -1,0 +1,327 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/thanmaiashok/bharat-stack/schemas/ewaybill-bulk.schema.json",
+  "title": "E-way bill bulk generation JSON (billLists)",
+  "description": "Hand-written from the e-way bill bulk tool format. NOT the official file: replace with the official schema when available and set x-verification to official.",
+  "x-source": "https://docs.ewaybillgst.gov.in/",
+  "x-last-verified": "2026-11-04",
+  "x-verification": "secondary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "billLists"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "billLists": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "userGstin",
+          "supplyType",
+          "subSupplyType",
+          "docType",
+          "docNo",
+          "docDate",
+          "transType",
+          "fromGstin",
+          "fromPincode",
+          "fromStateCode",
+          "actualFromStateCode",
+          "toGstin",
+          "toPincode",
+          "toStateCode",
+          "actualToStateCode",
+          "totInvValue",
+          "transMode",
+          "transDistance",
+          "itemList"
+        ],
+        "properties": {
+          "userGstin": {
+            "type": "string",
+            "minLength": 15,
+            "maxLength": 15,
+            "pattern": "^([0-9]{2}[0-9A-Z]{13})$"
+          },
+          "supplyType": {
+            "type": "string",
+            "enum": ["O", "I"]
+          },
+          "subSupplyType": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "subSupplyDesc": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 20
+          },
+          "docType": {
+            "type": "string",
+            "enum": ["INV", "BIL", "BOE", "CHL", "OTH"]
+          },
+          "docNo": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16,
+            "pattern": "^[A-Za-z0-9/-]{1,16}$"
+          },
+          "docDate": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 10,
+            "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+          },
+          "transType": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "fromGstin": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 15,
+            "pattern": "^(([0-9]{2}[0-9A-Z]{13})|URP)$"
+          },
+          "fromTrdName": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100
+          },
+          "fromAddr1": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 120
+          },
+          "fromAddr2": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 120
+          },
+          "fromPlace": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 50
+          },
+          "fromPincode": {
+            "type": "integer",
+            "minimum": 100000,
+            "maximum": 999999
+          },
+          "fromStateCode": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 99
+          },
+          "actualFromStateCode": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 99
+          },
+          "toGstin": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 15,
+            "pattern": "^(([0-9]{2}[0-9A-Z]{13})|URP)$"
+          },
+          "toTrdName": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100
+          },
+          "toAddr1": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 120
+          },
+          "toAddr2": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 120
+          },
+          "toPlace": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 50
+          },
+          "toPincode": {
+            "type": "integer",
+            "minimum": 100000,
+            "maximum": 999999
+          },
+          "toStateCode": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 99
+          },
+          "actualToStateCode": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 99
+          },
+          "totalValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "cgstValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "sgstValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "igstValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "cessValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "TotNonAdvolVal": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "OthValue": {
+            "type": "number",
+            "minimum": -99999999999999.98,
+            "maximum": 99999999999999.98
+          },
+          "totInvValue": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "transMode": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "transDistance": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4000
+          },
+          "transporterName": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100
+          },
+          "transporterId": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 15
+          },
+          "transDocNo": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 15
+          },
+          "transDocDate": {
+            "type": "string",
+            "pattern": "^$|^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+          },
+          "vehicleNo": {
+            "type": "string",
+            "pattern": "^$|^[A-Z0-9]{4,20}$"
+          },
+          "vehicleType": {
+            "type": "string",
+            "enum": ["R", "O"]
+          },
+          "mainHsnCode": {
+            "type": "integer",
+            "minimum": 1000,
+            "maximum": 99999999
+          },
+          "itemList": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 250,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["itemNo", "hsnCode", "quantity", "qtyUnit", "taxableAmount"],
+              "properties": {
+                "itemNo": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 999
+                },
+                "productName": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "productDesc": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 100
+                },
+                "hsnCode": {
+                  "type": "integer",
+                  "minimum": 1000,
+                  "maximum": 99999999
+                },
+                "quantity": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 9999999999.999
+                },
+                "qtyUnit": {
+                  "type": "string",
+                  "minLength": 3,
+                  "maxLength": 3
+                },
+                "taxableAmount": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 999999999999.99
+                },
+                "sgstRate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 99.999
+                },
+                "cgstRate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 99.999
+                },
+                "igstRate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 99.999
+                },
+                "cessRate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 999.999
+                },
+                "cessNonAdvol": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 999999999999.99
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

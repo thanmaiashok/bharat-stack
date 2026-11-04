@@ -1,0 +1,508 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/thanmaiashok/bharat-stack/schemas/einvoice-1.1.schema.json",
+  "title": "GST e-invoice (IRN) request, INV-01 version 1.1",
+  "description": "Hand-written from the INV-01 v1.1 field list. NOT the official NIC file: replace with the official schema when available and set x-verification to official.",
+  "x-source": "https://einvoice1.gst.gov.in/Documents/EINVOICE_SCHEMA.xlsx",
+  "x-last-verified": "2026-11-04",
+  "x-verification": "secondary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["Version", "TranDtls", "DocDtls", "SellerDtls", "BuyerDtls", "ItemList", "ValDtls"],
+  "properties": {
+    "Version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 6,
+      "enum": ["1.1"]
+    },
+    "TranDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["TaxSch", "SupTyp"],
+      "properties": {
+        "TaxSch": {
+          "type": "string",
+          "enum": ["GST"]
+        },
+        "SupTyp": {
+          "type": "string",
+          "enum": ["B2B", "SEZWP", "SEZWOP", "EXPWP", "EXPWOP", "DEXP"]
+        },
+        "RegRev": {
+          "type": "string",
+          "enum": ["Y", "N"]
+        },
+        "EcmGstin": {
+          "type": "string",
+          "minLength": 15,
+          "maxLength": 15,
+          "pattern": "^([0-9]{2}[0-9A-Z]{13})$"
+        },
+        "IgstOnIntra": {
+          "type": "string",
+          "enum": ["Y", "N"]
+        }
+      }
+    },
+    "DocDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Typ", "No", "Dt"],
+      "properties": {
+        "Typ": {
+          "type": "string",
+          "enum": ["INV", "CRN", "DBN"]
+        },
+        "No": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16,
+          "pattern": "^([A-Za-z1-9][A-Za-z0-9/-]{0,15})$"
+        },
+        "Dt": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10,
+          "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+        }
+      }
+    },
+    "SellerDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Gstin", "LglNm", "Addr1", "Loc", "Pin", "Stcd"],
+      "properties": {
+        "Gstin": {
+          "type": "string",
+          "minLength": 15,
+          "maxLength": 15,
+          "pattern": "^([0-9]{2}[0-9A-Z]{13})$"
+        },
+        "LglNm": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "TrdNm": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Addr1": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "Addr2": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Loc": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Pin": {
+          "type": "integer",
+          "minimum": 100000,
+          "maximum": 999999
+        },
+        "Stcd": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2,
+          "pattern": "^[0-9]{1,2}$"
+        },
+        "Ph": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 12,
+          "pattern": "^[0-9]+$"
+        },
+        "Em": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 100
+        }
+      }
+    },
+    "BuyerDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Gstin", "LglNm", "Pos", "Addr1", "Loc", "Pin", "Stcd"],
+      "properties": {
+        "Gstin": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 15,
+          "pattern": "^(([0-9]{2}[0-9A-Z]{13})|URP)$"
+        },
+        "Pos": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2,
+          "pattern": "^[0-9]{1,2}$"
+        },
+        "LglNm": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "TrdNm": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Addr1": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "Addr2": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Loc": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 100
+        },
+        "Pin": {
+          "type": "integer",
+          "minimum": 100000,
+          "maximum": 999999
+        },
+        "Stcd": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2,
+          "pattern": "^[0-9]{1,2}$"
+        },
+        "Ph": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 12,
+          "pattern": "^[0-9]+$"
+        },
+        "Em": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 100
+        }
+      }
+    },
+    "ItemList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "SlNo",
+          "IsServc",
+          "HsnCd",
+          "UnitPrice",
+          "TotAmt",
+          "AssAmt",
+          "GstRt",
+          "TotItemVal"
+        ],
+        "properties": {
+          "SlNo": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 6
+          },
+          "PrdDesc": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 300
+          },
+          "IsServc": {
+            "type": "string",
+            "enum": ["Y", "N"]
+          },
+          "HsnCd": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 8,
+            "pattern": "^[0-9]{4,8}$"
+          },
+          "Barcde": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 30
+          },
+          "Qty": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 9999999999.999
+          },
+          "FreeQty": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 9999999999.999
+          },
+          "Unit": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 8
+          },
+          "UnitPrice": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.999
+          },
+          "TotAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "Discount": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "PreTaxVal": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "AssAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "GstRt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999.999
+          },
+          "IgstAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "CgstAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "SgstAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "CesRt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999.999
+          },
+          "CesAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "CesNonAdvlAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "StateCesRt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999.999
+          },
+          "StateCesAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "StateCesNonAdvlAmt": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "OthChrg": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          },
+          "TotItemVal": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 999999999999.99
+          }
+        }
+      }
+    },
+    "ValDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["AssVal", "TotInvVal"],
+      "properties": {
+        "AssVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "CgstVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "SgstVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "IgstVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "CesVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "StCesVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "Discount": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "OthChrg": {
+          "type": "number",
+          "minimum": -99999999999999.98,
+          "maximum": 99999999999999.98
+        },
+        "RndOffAmt": {
+          "type": "number",
+          "minimum": -99.99,
+          "maximum": 99.99
+        },
+        "TotInvVal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "TotInvValFc": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        }
+      }
+    },
+    "PayDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Nm": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "AccDet": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "Mode": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 18
+        },
+        "FinInsBr": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 11
+        },
+        "PayTerm": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "PayInstr": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "CrTrn": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "DirDr": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "CrDay": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9999
+        },
+        "PaidAmt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        },
+        "PaymtDue": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        }
+      }
+    },
+    "ExpDtls": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ShipBNo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "ShipBDt": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10,
+          "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+        },
+        "Port": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 10
+        },
+        "RefClm": {
+          "type": "string",
+          "enum": ["Y", "N"]
+        },
+        "ForCur": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 16
+        },
+        "CntCode": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "ExpDuty": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 999999999999.99
+        }
+      }
+    }
+  }
+}

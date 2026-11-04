@@ -1,0 +1,323 @@
+{
+  "dataset": "gst-uqc",
+  "version": "2026.11.0",
+  "description": "Unit Quantity Codes (UQC) accepted in GST returns, e-invoice and e-way bill.",
+  "verification_note": "'secondary' = from secondary copies of the master list; the official page was unreachable from the build environment.",
+  "entries": [
+    {
+      "code": "BAG",
+      "name": "Bags",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BAL",
+      "name": "Bale",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BDL",
+      "name": "Bundles",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BKL",
+      "name": "Buckles",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BOU",
+      "name": "Billion of units",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BOX",
+      "name": "Box",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BTL",
+      "name": "Bottles",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "BUN",
+      "name": "Bunches",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "CAN",
+      "name": "Cans",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "CBM",
+      "name": "Cubic meters",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "CCM",
+      "name": "Cubic centimeters",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "CMS",
+      "name": "Centimeters",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "CTN",
+      "name": "Cartons",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "DOZ",
+      "name": "Dozens",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "DRM",
+      "name": "Drums",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "GGK",
+      "name": "Great gross",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "GMS",
+      "name": "Grammes",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "GRS",
+      "name": "Gross",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "GYD",
+      "name": "Gross yards",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "KGS",
+      "name": "Kilograms",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "KLR",
+      "name": "Kilolitre",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "KME",
+      "name": "Kilometre",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "LTR",
+      "name": "Litres",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "MLT",
+      "name": "Millilitre",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "MTR",
+      "name": "Meters",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "MTS",
+      "name": "Metric ton",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "NOS",
+      "name": "Numbers",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "OTH",
+      "name": "Others",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "PAC",
+      "name": "Packs",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "PCS",
+      "name": "Pieces",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "PRS",
+      "name": "Pairs",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "QTL",
+      "name": "Quintal",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "ROL",
+      "name": "Rolls",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "SET",
+      "name": "Sets",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "SQF",
+      "name": "Square feet",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "SQM",
+      "name": "Square meters",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "SQY",
+      "name": "Square yards",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "TBS",
+      "name": "Tablets",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "TGM",
+      "name": "Ten gross",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "THD",
+      "name": "Thousands",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "TON",
+      "name": "Tonnes",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "TUB",
+      "name": "Tubes",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "UGS",
+      "name": "US gallons",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "UNT",
+      "name": "Units",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "code": "YDS",
+      "name": "Yards",
+      "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    }
+  ]
+}

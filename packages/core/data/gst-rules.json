@@ -48,6 +48,51 @@
       "secondary_source": "https://abcaus.in/gst/reporting-hsn-codes-table-12-gstr-1-1a-from-may-2025.html/amp",
       "last_verified": "2026-11-04",
       "verification": "secondary"
+    },
+    {
+      "id": "eway_bill_threshold_paise",
+      "value": 5000000,
+      "description": "E-way bill generally needed when the consignment value (incl. tax) exceeds Rs 50,000 (CGST Rule 138(1)). Some states set different limits for intra-state movement.",
+      "source": "https://cbic-gst.gov.in/gst-rules.html",
+      "secondary_source": "https://docs.ewaybillgst.gov.in/",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "eway_bill_max_distance_km",
+      "value": 4000,
+      "description": "Maximum approximate distance accepted in an e-way bill, in km.",
+      "source": "https://docs.ewaybillgst.gov.in/",
+      "secondary_source": "https://docs.ewaybillgst.gov.in/",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "einvoice_aato_threshold_paise",
+      "value": 5000000000,
+      "description": "E-invoicing applies when aggregate annual turnover in any FY since 2017-18 exceeded Rs 5 crore (Notification 10/2023-Central Tax).",
+      "source": "https://einvoice1.gst.gov.in/",
+      "secondary_source": "https://www.mahagst.gov.in/public/uploads/gstnadvisory/1760531580_293%20Advisory%20Time%20Limit%20for%20Reporting%20e%20Invoice%20on%20the%20IRP%20Portal%20%20Lowering%20of%20Threshold%20to%20AATO%2010%20Crores%20and%20Above.pdf",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "einvoice_30_day_limit_aato_paise",
+      "value": 10000000000,
+      "description": "Taxpayers with AATO of Rs 10 crore or more must report invoices to the IRP within 30 days of the invoice date (from 01-04-2025, GSTN advisory).",
+      "source": "https://einvoice1.gst.gov.in/",
+      "secondary_source": "https://www.mahagst.gov.in/public/uploads/gstnadvisory/1760531580_293%20Advisory%20Time%20Limit%20for%20Reporting%20e%20Invoice%20on%20the%20IRP%20Portal%20%20Lowering%20of%20Threshold%20to%20AATO%2010%20Crores%20and%20Above.pdf",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "einvoice_reporting_days",
+      "value": 30,
+      "description": "Days allowed to report an invoice to the IRP for taxpayers above the 30-day-limit threshold.",
+      "source": "https://einvoice1.gst.gov.in/",
+      "secondary_source": "https://www.mahagst.gov.in/public/uploads/gstnadvisory/1760531580_293%20Advisory%20Time%20Limit%20for%20Reporting%20e%20Invoice%20on%20the%20IRP%20Portal%20%20Lowering%20of%20Threshold%20to%20AATO%2010%20Crores%20and%20Above.pdf",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
     }
   ]
 }

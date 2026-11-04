@@ -6,6 +6,7 @@ export {
   type DueDatesResult,
   gstReturnDueDates,
 } from "./due-dates.js";
+export * from "./einvoice/index.js";
 export { BharatInputError, type Issue } from "./errors.js";
 export {
   type CalendarDate,
@@ -56,4 +57,7 @@ export {
   listStates,
   STATE_CODES_VERSION,
 } from "./states.js";
+export * from "./tally/index.js";
 export { buildUpiUri, type UpiPayment, type UpiPaymentInput, validateVPA } from "./upi.js";
+export { listUQC, toUQC, type UQC } from "./uqc.js";
+export { escapeXml } from "./xml.js";

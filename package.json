@@ -16,17 +16,21 @@
     "test:coverage": "vitest run --coverage",
     "lint": "biome check .",
     "format": "biome check --write .",
-    "check": "pnpm lint && pnpm typecheck && pnpm test:coverage",
-    "examples": "pnpm build && node scripts/generate-examples.mjs"
+    "check": "pnpm lint && pnpm schemas:check && pnpm typecheck && pnpm test:coverage",
+    "examples": "pnpm build && node scripts/generate-examples.mjs",
+    "schemas": "node scripts/compile-schemas.mjs",
+    "schemas:check": "node scripts/compile-schemas.mjs --check"
   },
   "devDependencies": {
+    "@bharat-stack/core": "workspace:*",
+    "@bharat-stack/render": "workspace:*",
     "@biomejs/biome": "2.6.5",
     "@types/node": "^20.19.0",
     "@vitest/coverage-v8": "5.1.0",
+    "ajv": "8.20.0",
     "fast-check": "4.10.2",
+    "fast-xml-parser": "5.11.2",
     "typescript": "6.0.3",
-    "vitest": "5.1.0",
-    "@bharat-stack/core": "workspace:*",
-    "@bharat-stack/render": "workspace:*"
+    "vitest": "5.1.0"
   }
 }

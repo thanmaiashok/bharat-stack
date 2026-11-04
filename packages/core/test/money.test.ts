@@ -37,3 +37,19 @@ describe("paise conversions", () => {
     expect(() => paiseToDecimalString(1.5)).toThrow(BharatInputError);
   });
 });
+
+import { escapeXml } from "../src/index.js";
+import { el, renderXml } from "../src/xml.js";
+
+describe("xml helpers", () => {
+  it("escapes markup and strips control characters", () => {
+    expect(escapeXml(`a&b<c>"d"'e'\u0001`)).toBe("a&amp;b&lt;c&gt;&quot;d&quot;&apos;e&apos;");
+  });
+  it("renders empty, text and nested elements", () => {
+    expect(renderXml(el("A"))).toBe("<A/>");
+    expect(renderXml(el("A", { x: "1" }, el("B", "t"), null, false))).toBe(
+      '<A x="1">\n  <B>t</B>\n</A>',
+    );
+    expect(renderXml(el("A", el("B"), "text"))).toBe("<A>\n  <B/>\n  text\n</A>");
+  });
+});
