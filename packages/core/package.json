@@ -1,0 +1,48 @@
+{
+  "name": "@bharat-stack/core",
+  "version": "0.0.1",
+  "description": "Offline, deterministic Indian business functions: GSTIN/PAN validation, INR formatting, amount in words, financial year helpers. Zero runtime dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.10"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./data/*": "./data/*"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ],
+  "keywords": [
+    "gst",
+    "gstin",
+    "pan",
+    "india",
+    "inr",
+    "invoice",
+    "lakh",
+    "crore",
+    "ai-agents",
+    "claude"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanmaiashok/bharat-stack.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/thanmaiashok/bharat-stack#readme",
+  "bugs": "https://github.com/thanmaiashok/bharat-stack/issues",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
