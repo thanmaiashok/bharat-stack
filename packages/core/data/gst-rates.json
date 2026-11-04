@@ -1,0 +1,98 @@
+{
+  "dataset": "gst-rate-slabs",
+  "version": "2026.11.0",
+  "description": "GST rate slabs (combined rate; CGST and SGST/UTGST are each half, IGST is the full rate). Which slab applies to an item depends on its HSN/SAC; this file only lists the valid slabs and their validity dates.",
+  "verification_note": "'secondary' = checked against secondary sources only because the official portal was unreachable from the build environment.",
+  "entries": [
+    {
+      "rate": 0,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Nil rated / exempt / zero-rated",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 0.25,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Rough precious and semi-precious stones",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 1.5,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Cut and polished diamonds",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 3,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Gold, silver, jewellery",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 5,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Merit rate: essentials (expanded on 22-09-2025)",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 12,
+      "effective_from": "2017-07-01",
+      "effective_to": "2025-09-21",
+      "description": "Standard rate, removed in the 22-09-2025 rationalisation (Notification 9/2025-CT(R))",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 18,
+      "effective_from": "2017-07-01",
+      "effective_to": null,
+      "description": "Standard rate",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 28,
+      "effective_from": "2017-07-01",
+      "effective_to": "2026-01-31",
+      "description": "Removed for most goods on 22-09-2025; kept for tobacco products until 31-01-2026 (Notification 19/2025-CT(R))",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://www.livelaw.in/amp/tax-cases/new-rsp-based-valuation-mechanism-40-gst-rate-on-pan-masala-cigarettes-cigars-tobacco-products-from-february-01-516688",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "rate": 40,
+      "effective_from": "2025-09-22",
+      "effective_to": null,
+      "description": "Special rate: sin / luxury goods (Notification 9/2025-CT(R))",
+      "source": "https://cbic-gst.gov.in/central-tax-rate-notifications.html",
+      "secondary_source": "https://taxguru.in/goods-and-service-tax/cbic-revises-gst-rate-notification-under-finance-act-2026.html",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    }
+  ]
+}

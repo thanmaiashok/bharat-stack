@@ -38,6 +38,7 @@ export {
   type TestIdOptions,
   validateGSTIN,
 } from "./gstin.js";
+export * from "./invoice/index.js";
 export { type Amount, paiseToDecimalString, paiseToRupees, toPaise } from "./money.js";
 export {
   PAN_ENTITY_TYPES,
@@ -47,6 +48,7 @@ export {
   panEntityType,
   validatePAN,
 } from "./pan.js";
+export { type GSTRateSlab, gstRateSlabs, gstRule, isValidGSTRate } from "./rules.js";
 export {
   findStateByName,
   type GSTState,
@@ -54,3 +56,4 @@ export {
   listStates,
   STATE_CODES_VERSION,
 } from "./states.js";
+export { buildUpiUri, type UpiPayment, type UpiPaymentInput, validateVPA } from "./upi.js";

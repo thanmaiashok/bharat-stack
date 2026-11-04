@@ -13,7 +13,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "02",
@@ -24,7 +25,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "03",
@@ -35,7 +37,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "04",
@@ -46,7 +49,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "05",
@@ -57,7 +61,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "06",
@@ -68,7 +73,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "07",
@@ -79,7 +85,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "08",
@@ -90,7 +97,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "09",
@@ -101,7 +109,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "10",
@@ -112,7 +121,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "11",
@@ -123,7 +133,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "12",
@@ -134,7 +145,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "13",
@@ -145,7 +157,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "14",
@@ -156,7 +169,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "15",
@@ -167,7 +181,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "16",
@@ -178,7 +193,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "17",
@@ -189,7 +205,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "18",
@@ -200,7 +217,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "19",
@@ -211,7 +229,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "20",
@@ -222,7 +241,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "21",
@@ -233,7 +253,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "22",
@@ -244,7 +265,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "23",
@@ -255,7 +277,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "24",
@@ -266,7 +289,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "25",
@@ -278,7 +302,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "26",
@@ -290,7 +315,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "27",
@@ -301,7 +327,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "28",
@@ -313,7 +340,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "29",
@@ -324,7 +352,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "30",
@@ -335,7 +364,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "31",
@@ -346,7 +376,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "32",
@@ -357,7 +388,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "33",
@@ -368,7 +400,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "34",
@@ -379,7 +412,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "35",
@@ -390,7 +424,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "36",
@@ -401,7 +436,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "37",
@@ -412,7 +448,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "38",
@@ -424,7 +461,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "96",
@@ -436,7 +474,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     },
     {
       "code": "97",
@@ -448,7 +487,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "UTGST"
     },
     {
       "code": "99",
@@ -460,7 +500,8 @@
       "source": "https://einvoice1.gst.gov.in/Others/MasterCodes",
       "secondary_source": "https://developer.vertexinc.com/einvoicing/docs/india-b2b-suppliers-state-code",
       "last_verified": "2026-11-04",
-      "verification": "secondary"
+      "verification": "secondary",
+      "intraStateTax": "SGST"
     }
   ]
 }

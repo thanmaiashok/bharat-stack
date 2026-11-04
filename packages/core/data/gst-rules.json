@@ -1,0 +1,53 @@
+{
+  "dataset": "gst-rules",
+  "version": "2026.11.0",
+  "description": "Thresholds and limits used by the invoice engine.",
+  "verification_note": "'secondary' = checked against secondary sources only because the official portal was unreachable from the build environment.",
+  "entries": [
+    {
+      "id": "invoice_number_max_length",
+      "value": 16,
+      "description": "Invoice number: at most 16 characters, unique per financial year (CGST Rule 46(b)).",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter6/rule46_v1.00.html",
+      "secondary_source": "https://taxguru.in/?p=678307",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "invoice_number_pattern",
+      "value": "^[A-Za-z0-9/-]+$",
+      "description": "Invoice number may contain letters, digits, hyphen '-' and slash '/' only (CGST Rule 46(b)).",
+      "source": "https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/rules/cgst_rules/active/chapter6/rule46_v1.00.html",
+      "secondary_source": "https://taxguru.in/?p=678307",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "hsn_digits_aato_upto_5cr",
+      "value": 4,
+      "description": "Minimum HSN digits on B2B invoices when aggregate annual turnover is up to Rs 5 crore (Notification 78/2020-CT).",
+      "source": "https://cbic-gst.gov.in/central-tax-notifications.html",
+      "secondary_source": "https://abcaus.in/gst/reporting-hsn-codes-table-12-gstr-1-1a-from-may-2025.html/amp",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "hsn_digits_aato_above_5cr",
+      "value": 6,
+      "description": "Minimum HSN digits on invoices when aggregate annual turnover exceeds Rs 5 crore (Notification 78/2020-CT).",
+      "source": "https://cbic-gst.gov.in/central-tax-notifications.html",
+      "secondary_source": "https://abcaus.in/gst/reporting-hsn-codes-table-12-gstr-1-1a-from-may-2025.html/amp",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    },
+    {
+      "id": "hsn_aato_threshold_paise",
+      "value": 5000000000,
+      "description": "Aggregate annual turnover threshold (Rs 5 crore, in paise) that switches HSN digits from 4 to 6.",
+      "source": "https://cbic-gst.gov.in/central-tax-notifications.html",
+      "secondary_source": "https://abcaus.in/gst/reporting-hsn-codes-table-12-gstr-1-1a-from-may-2025.html/amp",
+      "last_verified": "2026-11-04",
+      "verification": "secondary"
+    }
+  ]
+}

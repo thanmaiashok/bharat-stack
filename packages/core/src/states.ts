@@ -10,6 +10,8 @@ export interface GSTState extends Sourced {
   legacy: boolean;
   /** Whether a GSTIN can start with this code. */
   gstinPrefix: boolean;
+  /** Tax charged with CGST on intra-state supplies: SGST in states, UTGST in UTs without a legislature. */
+  intraStateTax: "SGST" | "UTGST";
   note?: string;
 }
 
