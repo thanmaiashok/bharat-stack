@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "paths": { "@bharat-stack/core": ["../core/src/index.ts"] },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}

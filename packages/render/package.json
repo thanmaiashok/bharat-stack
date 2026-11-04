@@ -1,0 +1,47 @@
+{
+  "name": "@bharat-stack/render",
+  "version": "0.0.1",
+  "description": "Render bharat-stack invoices to A4 PDF and HTML, and UPI payment links to QR codes (PNG/SVG).",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "gst",
+    "invoice",
+    "pdf",
+    "upi",
+    "qr",
+    "india"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanmaiashok/bharat-stack.git",
+    "directory": "packages/render"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@bharat-stack/core": "workspace:*",
+    "pdf-lib": "1.17.1",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.6"
+  }
+}

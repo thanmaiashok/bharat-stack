@@ -1,6 +1,16 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.6.5/schema.json",
-  "files": { "includes": ["**", "!**/dist", "!**/coverage", "!**/node_modules"] },
+  "files": {
+    "includes": [
+      "**",
+      "!**/dist",
+      "!**/coverage",
+      "!**/node_modules",
+      "!examples/**/*.html",
+      "!examples/**/*.svg",
+      "!examples/**/*.json"
+    ]
+  },
   "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 100 },
   "linter": { "enabled": true, "rules": { "preset": "recommended" } },
   "javascript": { "formatter": { "quoteStyle": "double" } }

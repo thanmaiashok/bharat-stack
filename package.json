@@ -2,7 +2,7 @@
   "name": "bharat-stack-monorepo",
   "private": true,
   "version": "0.0.0",
-  "description": "India business toolkit for Claude & AI agents — GST invoices, UPI QR, Tally, e-invoice JSON. Offline. Open source.",
+  "description": "India business toolkit for Claude & AI agents \u2014 GST invoices, UPI QR, Tally, e-invoice JSON. Offline. Open source.",
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@10.28.0",
@@ -16,7 +16,8 @@
     "test:coverage": "vitest run --coverage",
     "lint": "biome check .",
     "format": "biome check --write .",
-    "check": "pnpm lint && pnpm typecheck && pnpm test:coverage"
+    "check": "pnpm lint && pnpm typecheck && pnpm test:coverage",
+    "examples": "pnpm build && node scripts/generate-examples.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.5",
@@ -24,6 +25,8 @@
     "@vitest/coverage-v8": "5.1.0",
     "fast-check": "4.10.2",
     "typescript": "6.0.3",
-    "vitest": "5.1.0"
+    "vitest": "5.1.0",
+    "@bharat-stack/core": "workspace:*",
+    "@bharat-stack/render": "workspace:*"
   }
 }
