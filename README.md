@@ -33,6 +33,8 @@
 
 ## Development
 
+Needs Node 22.12+ and pnpm 10 (the published packages themselves run on Node 20.10+).
+
 ```bash
 pnpm install
 pnpm check      # lint + typecheck + tests with coverage
