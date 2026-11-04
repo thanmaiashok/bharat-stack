@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/thanmaiashok/bharat-stack/schemas/ewaybill-bulk.schema.json",
   "title": "E-way bill bulk generation JSON (billLists)",
-  "description": "Hand-written from the e-way bill bulk tool format. NOT the official file: replace with the official schema when available and set x-verification to official.",
-  "x-source": "https://docs.ewaybillgst.gov.in/",
+  "description": "Rebuilt from a public copy of NIC's EWB_Attributes_new schema sheet and the india-compliance bulk JSON writer (official portal unreachable from the build environment). Replace with the official file when available and set x-verification to official.",
+  "x-source": "https://raw.githubusercontent.com/CYCLOP5/CreditIQ/HEAD/ewaybillformats/EWB_Attributes_new%20-%20Schema.csv",
   "x-last-verified": "2026-11-04",
   "x-verification": "secondary",
   "type": "object",
@@ -22,7 +22,6 @@
         "type": "object",
         "additionalProperties": false,
         "required": [
-          "userGstin",
           "supplyType",
           "subSupplyType",
           "docType",
@@ -61,7 +60,7 @@
           "subSupplyDesc": {
             "type": "string",
             "minLength": 0,
-            "maxLength": 20
+            "maxLength": 100
           },
           "docType": {
             "type": "string",
@@ -77,7 +76,7 @@
             "type": "string",
             "minLength": 10,
             "maxLength": 10,
-            "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+            "pattern": "^[0-3][0-9]/[0-1][0-9]/[2][0][1-2][0-9]$"
           },
           "transType": {
             "type": "integer",
@@ -233,11 +232,12 @@
           },
           "transDocDate": {
             "type": "string",
-            "pattern": "^$|^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+            "pattern": "^$|^[0-3][0-9]/[0-1][0-9]/[2][0][1-2][0-9]$"
           },
           "vehicleNo": {
             "type": "string",
-            "pattern": "^$|^[A-Z0-9]{4,20}$"
+            "maxLength": 15,
+            "pattern": "^$|^[A-Z0-9]{4,15}$"
           },
           "vehicleType": {
             "type": "string",
@@ -323,5 +323,6 @@
         }
       }
     }
-  }
+  },
+  "x-secondary-source": "https://raw.githubusercontent.com/resilient-tech/india-compliance/develop/india_compliance/gst_india/utils/e_waybill.py"
 }

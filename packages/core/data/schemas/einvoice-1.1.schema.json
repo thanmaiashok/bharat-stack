@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/thanmaiashok/bharat-stack/schemas/einvoice-1.1.schema.json",
   "title": "GST e-invoice (IRN) request, INV-01 version 1.1",
-  "description": "Hand-written from the INV-01 v1.1 field list. NOT the official NIC file: replace with the official schema when available and set x-verification to official.",
-  "x-source": "https://einvoice1.gst.gov.in/Documents/EINVOICE_SCHEMA.xlsx",
+  "description": "Rebuilt from two public copies of the NIC INV-01 v1.1 schema workbook (official portal unreachable from the build environment). Field lengths, ranges and patterns match those copies. Replace with the official file when available and set x-verification to official.",
+  "x-source": "https://raw.githubusercontent.com/in-co-sandbox/in-co-sandbox-docs/HEAD/data/gst/schema/request/e-invoice/generate_e_invoice.json",
   "x-last-verified": "2026-11-04",
   "x-verification": "secondary",
   "type": "object",
@@ -13,8 +13,7 @@
     "Version": {
       "type": "string",
       "minLength": 1,
-      "maxLength": 6,
-      "enum": ["1.1"]
+      "maxLength": 6
     },
     "TranDtls": {
       "type": "object",
@@ -64,7 +63,7 @@
           "type": "string",
           "minLength": 10,
           "maxLength": 10,
-          "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+          "pattern": "^[0-3][0-9]/[0-1][0-9]/[2][0][1-2][0-9]$"
         }
       }
     },
@@ -82,27 +81,32 @@
         "LglNm": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "TrdNm": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Addr1": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Addr2": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Loc": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 50,
+          "pattern": "^[^\"]*$"
         },
         "Pin": {
           "type": "integer",
@@ -113,25 +117,26 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 2,
-          "pattern": "^[0-9]{1,2}$"
+          "pattern": "^(?!0+$)([0-9]{1,2})$"
         },
         "Ph": {
           "type": "string",
           "minLength": 6,
           "maxLength": 12,
-          "pattern": "^[0-9]+$"
+          "pattern": "^([0-9]{6,12})$"
         },
         "Em": {
           "type": "string",
           "minLength": 6,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         }
       }
     },
     "BuyerDtls": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["Gstin", "LglNm", "Pos", "Addr1", "Loc", "Pin", "Stcd"],
+      "required": ["Gstin", "LglNm", "Pos", "Addr1", "Loc", "Stcd"],
       "properties": {
         "Gstin": {
           "type": "string",
@@ -143,32 +148,37 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 2,
-          "pattern": "^[0-9]{1,2}$"
+          "pattern": "^(?!0+$)([0-9]{1,2})$"
         },
         "LglNm": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "TrdNm": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Addr1": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Addr2": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Loc": {
           "type": "string",
           "minLength": 3,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[^\"]*$"
         },
         "Pin": {
           "type": "integer",
@@ -179,25 +189,25 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 2,
-          "pattern": "^[0-9]{1,2}$"
+          "pattern": "^(?!0+$)([0-9]{1,2})$"
         },
         "Ph": {
           "type": "string",
           "minLength": 6,
           "maxLength": 12,
-          "pattern": "^[0-9]+$"
+          "pattern": "^([0-9]{6,12})$"
         },
         "Em": {
           "type": "string",
           "minLength": 6,
-          "maxLength": 100
+          "maxLength": 100,
+          "pattern": "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         }
       }
     },
     "ItemList": {
       "type": "array",
       "minItems": 1,
-      "maxItems": 1000,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -215,12 +225,14 @@
           "SlNo": {
             "type": "string",
             "minLength": 1,
-            "maxLength": 6
+            "maxLength": 6,
+            "pattern": "^([0-9]{1,6})$"
           },
           "PrdDesc": {
             "type": "string",
             "minLength": 3,
-            "maxLength": 300
+            "maxLength": 300,
+            "pattern": "^[^\"]*$"
           },
           "IsServc": {
             "type": "string",
@@ -230,7 +242,7 @@
             "type": "string",
             "minLength": 4,
             "maxLength": 8,
-            "pattern": "^[0-9]{4,8}$"
+            "pattern": "^(?!0+$)([0-9]{4}|[0-9]{6}|[0-9]{8})$"
           },
           "Barcde": {
             "type": "string",
@@ -250,7 +262,8 @@
           "Unit": {
             "type": "string",
             "minLength": 3,
-            "maxLength": 8
+            "maxLength": 8,
+            "pattern": "^([A-Z|a-z]{3,8})$"
           },
           "UnitPrice": {
             "type": "number",
@@ -348,41 +361,41 @@
         "AssVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "CgstVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "SgstVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "IgstVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "CesVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "StCesVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "Discount": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "OthChrg": {
           "type": "number",
-          "minimum": -99999999999999.98,
+          "minimum": 0,
           "maximum": 99999999999999.98
         },
         "RndOffAmt": {
@@ -393,12 +406,12 @@
         "TotInvVal": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         },
         "TotInvValFc": {
           "type": "number",
           "minimum": 0,
-          "maximum": 999999999999.99
+          "maximum": 99999999999999.98
         }
       }
     },
@@ -476,12 +489,13 @@
           "type": "string",
           "minLength": 10,
           "maxLength": 10,
-          "pattern": "^[0-3][0-9]/[0-1][0-9]/20[0-9]{2}$"
+          "pattern": "^[0-3][0-9]/[0-1][0-9]/[2][0][1-2][0-9]$"
         },
         "Port": {
           "type": "string",
           "minLength": 2,
-          "maxLength": 10
+          "maxLength": 10,
+          "pattern": "^[0-9|A-Z|a-z]{2,10}$"
         },
         "RefClm": {
           "type": "string",
@@ -495,7 +509,8 @@
         "CntCode": {
           "type": "string",
           "minLength": 2,
-          "maxLength": 2
+          "maxLength": 2,
+          "pattern": "^([A-Z]{2})$"
         },
         "ExpDuty": {
           "type": "number",
@@ -504,5 +519,6 @@
         }
       }
     }
-  }
+  },
+  "x-secondary-source": "https://raw.githubusercontent.com/aiinicai/AICA-Level-2-Projects/HEAD/AICA-L2B88-Capstone%20Project_PraNam_EInvoice_Converter%20by%20CA%20Pratik%20Trivedi/pec/data/einvoice_schema_v1_1.json"
 }

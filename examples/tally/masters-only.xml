@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ENVELOPE>
+  <HEADER>
+    <TALLYREQUEST>Import Data</TALLYREQUEST>
+  </HEADER>
+  <BODY>
+    <IMPORTDATA>
+      <REQUESTDESC>
+        <REPORTNAME>All Masters</REPORTNAME>
+        <STATICVARIABLES>
+          <SVCURRENTCOMPANY>Demo Traders Private Limited</SVCURRENTCOMPANY>
+        </STATICVARIABLES>
+      </REQUESTDESC>
+      <REQUESTDATA>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Sample Buyer LLP" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Sample Buyer LLP</NAME>
+            </NAME.LIST>
+            <PARENT>Sundry Debtors</PARENT>
+            <ISBILLWISEON>Yes</ISBILLWISEON>
+            <ADDRESS.LIST TYPE="String">
+              <ADDRESS>Unit 4, Example Industrial Estate, Andheri East</ADDRESS>
+            </ADDRESS.LIST>
+            <COUNTRYNAME>India</COUNTRYNAME>
+            <STATENAME>Maharashtra</STATENAME>
+            <LEDSTATENAME>Maharashtra</LEDSTATENAME>
+            <PINCODE>400069</PINCODE>
+            <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+            <PARTYGSTIN>27TIHCN8643U1ZC</PARTYGSTIN>
+            <LEDGSTREGDETAILS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+              <STATE>Maharashtra</STATE>
+              <GSTIN>27TIHCN8643U1ZC</GSTIN>
+            </LEDGSTREGDETAILS.LIST>
+            <LEDMAILINGDETAILS.LIST>
+              <ADDRESS.LIST TYPE="String">
+                <ADDRESS>Unit 4, Example Industrial Estate, Andheri East</ADDRESS>
+              </ADDRESS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <MAILINGNAME>Sample Buyer LLP</MAILINGNAME>
+              <STATE>Maharashtra</STATE>
+              <COUNTRY>India</COUNTRY>
+              <PINCODE>400069</PINCODE>
+            </LEDMAILINGDETAILS.LIST>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Sales @ 18%" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Sales @ 18%</NAME>
+            </NAME.LIST>
+            <PARENT>Sales Accounts</PARENT>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Output IGST" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Output IGST</NAME>
+            </NAME.LIST>
+            <PARENT>Duties &amp; Taxes</PARENT>
+            <TAXTYPE>GST</TAXTYPE>
+            <GSTDUTYHEAD>IGST</GSTDUTYHEAD>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Round Off" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Round Off</NAME>
+            </NAME.LIST>
+            <PARENT>Indirect Expenses</PARENT>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Local Client Pvt Ltd" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Local Client Pvt Ltd</NAME>
+            </NAME.LIST>
+            <PARENT>Sundry Debtors</PARENT>
+            <ISBILLWISEON>Yes</ISBILLWISEON>
+            <COUNTRYNAME>India</COUNTRYNAME>
+            <STATENAME>Karnataka</STATENAME>
+            <LEDSTATENAME>Karnataka</LEDSTATENAME>
+            <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+            <PARTYGSTIN>29NNPCP8505P1ZB</PARTYGSTIN>
+            <LEDGSTREGDETAILS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+              <STATE>Karnataka</STATE>
+              <GSTIN>29NNPCP8505P1ZB</GSTIN>
+            </LEDGSTREGDETAILS.LIST>
+            <LEDMAILINGDETAILS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <MAILINGNAME>Local Client Pvt Ltd</MAILINGNAME>
+              <STATE>Karnataka</STATE>
+              <COUNTRY>India</COUNTRY>
+            </LEDMAILINGDETAILS.LIST>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Sales - Nil Rated" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Sales - Nil Rated</NAME>
+            </NAME.LIST>
+            <PARENT>Sales Accounts</PARENT>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Output CGST" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Output CGST</NAME>
+            </NAME.LIST>
+            <PARENT>Duties &amp; Taxes</PARENT>
+            <TAXTYPE>GST</TAXTYPE>
+            <GSTDUTYHEAD>CGST</GSTDUTYHEAD>
+          </LEDGER>
+        </TALLYMESSAGE>
+        <TALLYMESSAGE xmlns:UDF="TallyUDF">
+          <LEDGER NAME="Output SGST" ACTION="Create">
+            <NAME.LIST>
+              <NAME>Output SGST</NAME>
+            </NAME.LIST>
+            <PARENT>Duties &amp; Taxes</PARENT>
+            <TAXTYPE>GST</TAXTYPE>
+            <GSTDUTYHEAD>SGST/UTGST</GSTDUTYHEAD>
+          </LEDGER>
+        </TALLYMESSAGE>
+      </REQUESTDATA>
+    </IMPORTDATA>
+  </BODY>
+</ENVELOPE>

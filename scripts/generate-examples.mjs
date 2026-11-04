@@ -3,7 +3,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { createInvoice, generateTestGSTIN } from "@bharat-stack/core";
+import {
+  createInvoice,
+  generateTestGSTIN,
+  invoicesToEWayBill,
+  invoicesToTallyXml,
+  invoiceToEInvoice,
+} from "@bharat-stack/core";
 import { renderInvoiceHtml, renderInvoicePdf, upiQr } from "@bharat-stack/render";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "examples");
@@ -92,6 +98,7 @@ const examples = {
   },
 };
 
+const computed = [];
 for (const [name, input] of Object.entries(examples)) {
   const result = createInvoice(input);
   if (!result.invoice) throw new Error(`${name}: ${JSON.stringify(result.errors)}`);
@@ -99,7 +106,24 @@ for (const [name, input] of Object.entries(examples)) {
   write(`gst-invoice/${name}.json`, `${JSON.stringify(result, null, 2)}\n`);
   write(`gst-invoice/${name}.pdf`, await renderInvoicePdf(result.invoice));
   write(`gst-invoice/${name}.html`, renderInvoiceHtml(result.invoice));
+  computed.push(result.invoice);
 }
+
+// Tally: one file with masters + vouchers, and the same split in two.
+const tally = invoicesToTallyXml(computed, { companyName: "Demo Traders Private Limited" });
+write("tally/sales-vouchers.xml", tally.xml);
+write("tally/masters-only.xml", tally.mastersXml);
+write("tally/vouchers-only.xml", tally.vouchersXml);
+
+// E-invoice and e-way bill files (generated only; never submitted).
+const einv = invoiceToEInvoice(computed[0]);
+if (!einv.ok) throw new Error(`e-invoice: ${JSON.stringify(einv.errors)}`);
+write("einvoice/bengaluru-to-mumbai.einvoice.json", `${JSON.stringify(einv.json, null, 2)}\n`);
+const ewb = invoicesToEWayBill(computed[0], {
+  transport: { mode: "road", distanceKm: 980, vehicleNo: "KA01AB1234" },
+});
+if (!ewb.ok) throw new Error(`e-way bill: ${JSON.stringify(ewb.errors)}`);
+write("einvoice/bengaluru-to-mumbai.ewaybill.json", `${JSON.stringify(ewb.json, null, 2)}\n`);
 
 const qr = await upiQr({
   vpa: "demotraders@okaxis",

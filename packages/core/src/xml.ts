@@ -1,15 +1,16 @@
+/** Characters not allowed in XML 1.0 (stripped). */
+// biome-ignore lint/suspicious/noControlCharactersInRegex: matching control characters is the point.
+const INVALID_XML_CHARS = /[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g;
+
 /** Escape text for XML element content and attribute values. */
 export function escapeXml(s: string): string {
-  return (
-    s
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&apos;")
-      // Characters not allowed in XML 1.0.
-      .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "")
-  );
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;")
+    .replace(INVALID_XML_CHARS, "");
 }
 
 export type XmlChild = XmlNode | string | number | null | undefined | false;

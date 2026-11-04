@@ -26,11 +26,29 @@ exports[`invoicesToTallyXml > golden: inter-state sales voucher 1`] = `
               <ADDRESS>Unit 4, Example Industrial Estate</ADDRESS>
               <ADDRESS>Andheri East</ADDRESS>
             </ADDRESS.LIST>
-            <LEDSTATENAME>Maharashtra</LEDSTATENAME>
             <COUNTRYNAME>India</COUNTRYNAME>
+            <STATENAME>Maharashtra</STATENAME>
+            <LEDSTATENAME>Maharashtra</LEDSTATENAME>
             <PINCODE>400069</PINCODE>
             <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
             <PARTYGSTIN>27TIHCN8643U1ZC</PARTYGSTIN>
+            <LEDGSTREGDETAILS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
+              <STATE>Maharashtra</STATE>
+              <GSTIN>27TIHCN8643U1ZC</GSTIN>
+            </LEDGSTREGDETAILS.LIST>
+            <LEDMAILINGDETAILS.LIST>
+              <ADDRESS.LIST TYPE="String">
+                <ADDRESS>Unit 4, Example Industrial Estate</ADDRESS>
+                <ADDRESS>Andheri East</ADDRESS>
+              </ADDRESS.LIST>
+              <APPLICABLEFROM>20260401</APPLICABLEFROM>
+              <MAILINGNAME>Sample Buyer LLP</MAILINGNAME>
+              <STATE>Maharashtra</STATE>
+              <COUNTRY>India</COUNTRY>
+              <PINCODE>400069</PINCODE>
+            </LEDMAILINGDETAILS.LIST>
           </LEDGER>
         </TALLYMESSAGE>
         <TALLYMESSAGE xmlns:UDF="TallyUDF">
@@ -48,7 +66,7 @@ exports[`invoicesToTallyXml > golden: inter-state sales voucher 1`] = `
             </NAME.LIST>
             <PARENT>Duties &amp; Taxes</PARENT>
             <TAXTYPE>GST</TAXTYPE>
-            <GSTDUTYHEAD>Integrated Tax</GSTDUTYHEAD>
+            <GSTDUTYHEAD>IGST</GSTDUTYHEAD>
           </LEDGER>
         </TALLYMESSAGE>
         <TALLYMESSAGE xmlns:UDF="TallyUDF">
@@ -59,34 +77,28 @@ exports[`invoicesToTallyXml > golden: inter-state sales voucher 1`] = `
             <PARENT>Indirect Expenses</PARENT>
           </LEDGER>
         </TALLYMESSAGE>
-      </REQUESTDATA>
-    </IMPORTDATA>
-    <IMPORTDATA>
-      <REQUESTDESC>
-        <REPORTNAME>Vouchers</REPORTNAME>
-        <STATICVARIABLES>
-          <SVCURRENTCOMPANY>Demo Traders</SVCURRENTCOMPANY>
-        </STATICVARIABLES>
-      </REQUESTDESC>
-      <REQUESTDATA>
         <TALLYMESSAGE xmlns:UDF="TallyUDF">
-          <VOUCHER VCHTYPE="Sales" ACTION="Create" OBJVIEW="Accounting Voucher View">
+          <VOUCHER VCHTYPE="Sales" ACTION="Create" OBJVIEW="Invoice Voucher View">
             <DATE>20261104</DATE>
             <EFFECTIVEDATE>20261104</EFFECTIVEDATE>
+            <REFERENCEDATE>20261104</REFERENCEDATE>
+            <REFERENCE>BS/2026-27/001</REFERENCE>
             <VOUCHERTYPENAME>Sales</VOUCHERTYPENAME>
             <VOUCHERNUMBER>BS/2026-27/001</VOUCHERNUMBER>
-            <REFERENCE>BS/2026-27/001</REFERENCE>
             <PARTYLEDGERNAME>Sample Buyer LLP</PARTYLEDGERNAME>
             <PARTYNAME>Sample Buyer LLP</PARTYNAME>
+            <PARTYMAILINGNAME>Sample Buyer LLP</PARTYMAILINGNAME>
+            <BASICBUYERNAME>Sample Buyer LLP</BASICBUYERNAME>
             <PARTYGSTIN>27TIHCN8643U1ZC</PARTYGSTIN>
             <GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE>
             <STATENAME>Maharashtra</STATENAME>
             <PLACEOFSUPPLY>Maharashtra</PLACEOFSUPPLY>
             <COUNTRYOFRESIDENCE>India</COUNTRYOFRESIDENCE>
-            <PERSISTEDVIEW>Accounting Voucher View</PERSISTEDVIEW>
-            <ISINVOICE>No</ISINVOICE>
+            <PERSISTEDVIEW>Invoice Voucher View</PERSISTEDVIEW>
+            <VCHENTRYMODE>Accounting Invoice</VCHENTRYMODE>
+            <ISINVOICE>Yes</ISINVOICE>
             <NARRATION>Sales invoice BS/2026-27/001 dated 04-11-2026</NARRATION>
-            <ALLLEDGERENTRIES.LIST>
+            <LEDGERENTRIES.LIST>
               <LEDGERNAME>Sample Buyer LLP</LEDGERNAME>
               <ISDEEMEDPOSITIVE>Yes</ISDEEMEDPOSITIVE>
               <ISPARTYLEDGER>Yes</ISPARTYLEDGER>
@@ -96,25 +108,25 @@ exports[`invoicesToTallyXml > golden: inter-state sales voucher 1`] = `
                 <BILLTYPE>New Ref</BILLTYPE>
                 <AMOUNT>-6544.00</AMOUNT>
               </BILLALLOCATIONS.LIST>
-            </ALLLEDGERENTRIES.LIST>
-            <ALLLEDGERENTRIES.LIST>
+            </LEDGERENTRIES.LIST>
+            <LEDGERENTRIES.LIST>
               <LEDGERNAME>Sales @ 18%</LEDGERNAME>
               <ISDEEMEDPOSITIVE>No</ISDEEMEDPOSITIVE>
               <ISPARTYLEDGER>No</ISPARTYLEDGER>
               <AMOUNT>5545.75</AMOUNT>
-            </ALLLEDGERENTRIES.LIST>
-            <ALLLEDGERENTRIES.LIST>
+            </LEDGERENTRIES.LIST>
+            <LEDGERENTRIES.LIST>
               <LEDGERNAME>Output IGST</LEDGERNAME>
               <ISDEEMEDPOSITIVE>No</ISDEEMEDPOSITIVE>
               <ISPARTYLEDGER>No</ISPARTYLEDGER>
               <AMOUNT>998.24</AMOUNT>
-            </ALLLEDGERENTRIES.LIST>
-            <ALLLEDGERENTRIES.LIST>
+            </LEDGERENTRIES.LIST>
+            <LEDGERENTRIES.LIST>
               <LEDGERNAME>Round Off</LEDGERNAME>
               <ISDEEMEDPOSITIVE>No</ISDEEMEDPOSITIVE>
               <ISPARTYLEDGER>No</ISPARTYLEDGER>
               <AMOUNT>0.01</AMOUNT>
-            </ALLLEDGERENTRIES.LIST>
+            </LEDGERENTRIES.LIST>
           </VOUCHER>
         </TALLYMESSAGE>
       </REQUESTDATA>

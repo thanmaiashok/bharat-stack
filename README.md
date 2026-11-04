@@ -2,9 +2,9 @@
 
 **India business toolkit for Claude & AI agents — GST invoices, UPI QR, Tally, e-invoice JSON. Offline. Open source.**
 
-> 🚧 Work in progress. Phases 1–2 are done: core formats, GSTIN/PAN, and the GST invoice engine with PDF + UPI QR. Install instructions arrive with the plugin in Phase 5.
+> 🚧 Work in progress. Phases 1–3 are done: core formats, GSTIN/PAN, the GST invoice engine with PDF + UPI QR, and Tally / e-invoice / e-way bill exports. Install instructions arrive with the plugin in Phase 5.
 
-**See real output:** [inter-state invoice PDF](examples/gst-invoice/bengaluru-to-mumbai.pdf) (Bengaluru → Mumbai, IGST, UPI QR) · [intra-state PDF](examples/gst-invoice/bengaluru-intra-state.pdf) (CGST + SGST) · [invoice JSON](examples/gst-invoice/bengaluru-to-mumbai.json)
+**See real output:** [inter-state invoice PDF](examples/gst-invoice/bengaluru-to-mumbai.pdf) (Bengaluru → Mumbai, IGST, UPI QR) · [intra-state PDF](examples/gst-invoice/bengaluru-intra-state.pdf) (CGST + SGST) · [invoice JSON](examples/gst-invoice/bengaluru-to-mumbai.json) · [Tally XML](examples/tally/sales-vouchers.xml) · [e-invoice JSON](examples/einvoice/bengaluru-to-mumbai.einvoice.json) · [e-way bill JSON](examples/einvoice/bengaluru-to-mumbai.ewaybill.json)
 
 ## What works today (`@bharat-stack/core`)
 
@@ -25,7 +25,7 @@
 - [x] P0 — Read current docs, agree structure ([decisions](docs/decisions.md))
 - [x] P1 — Core: Indian formats, GSTIN/PAN, state codes, tests
 - [x] P2 — GST invoice engine + PDF + UPI QR
-- [ ] P3 — Tally XML + e-invoice / e-way bill JSON
+- [x] P3 — Tally XML + e-invoice / e-way bill JSON
 - [ ] P4 — IFSC / pincode offline lookup
 - [ ] P5 — Skills + Claude Code plugin + marketplace
 - [ ] P6 — MCP server
@@ -42,6 +42,8 @@ pnpm examples   # rebuild the files in examples/
 ```
 
 ## Disclaimer
+
+bharat-stack only creates files. It never logs in to or submits anything to the GST, IRP or e-way bill portals.
 
 Not tax/legal advice. Verify rates with official GST sources. All GSTINs/PANs in tests and examples are synthetic.
 

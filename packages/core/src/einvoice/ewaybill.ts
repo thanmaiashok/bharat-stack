@@ -7,8 +7,8 @@ import { gstRule } from "../rules.js";
 import { toUQC } from "../uqc.js";
 import { validateEWayBillSchema } from "./validate.js";
 
-/** Version string the bulk tool expects. Last confirmed value; update in one place. */
-export const EWAYBILL_BULK_VERSION = "1.0.0618";
+/** Bulk JSON version string. Latest found in public sources (india-compliance); update in one place. */
+export const EWAYBILL_BULK_VERSION = "1.0.0621";
 
 export interface EWayBillTransport {
   mode: "road" | "rail" | "air" | "ship";

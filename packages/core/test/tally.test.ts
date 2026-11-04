@@ -16,27 +16,30 @@ const make = (input: InvoiceInput): Invoice => {
 };
 const parser = new XMLParser({
   ignoreAttributes: false,
-  isArray: (name) => name.endsWith(".LIST") || name === "TALLYMESSAGE" || name === "IMPORTDATA",
+  isArray: (name) =>
+    (name.endsWith(".LIST") && name !== "NAME.LIST") ||
+    name === "TALLYMESSAGE" ||
+    name === "IMPORTDATA",
 });
 
-/** Every voucher: amounts sum to zero; every ledger used is defined in the masters. */
-function checkBooks(xml: string) {
+/** Every voucher: amounts sum to zero, flags match signs, every ledger used is defined. */
+function checkBooks(xml: string, mastersExpected = true) {
   expect(XMLValidator.validate(xml)).toBe(true);
   const doc = parser.parse(xml);
-  const imports = doc.ENVELOPE.BODY.IMPORTDATA as any[];
-  const masters = imports.find((i) => i.REQUESTDESC.REPORTNAME === "All Masters");
-  const defined = new Set<string>(
-    (masters?.REQUESTDATA.TALLYMESSAGE ?? []).map((m: any) => m.LEDGER["@_NAME"]),
-  );
-  const vouchers = imports
-    .find((i) => i.REQUESTDESC.REPORTNAME === "Vouchers")
-    .REQUESTDATA.TALLYMESSAGE.map((m: any) => m.VOUCHER);
+  const messages = doc.ENVELOPE.BODY.IMPORTDATA[0].REQUESTDATA.TALLYMESSAGE as any[];
+  const defined = new Set<string>(messages.filter((m) => m.LEDGER).map((m) => m.LEDGER["@_NAME"]));
+  const vouchers = messages.filter((m) => m.VOUCHER).map((m) => m.VOUCHER);
+  const firstVoucher = messages.findIndex((m) => m.VOUCHER);
+  expect(messages.slice(firstVoucher).some((m) => m.LEDGER)).toBe(false); // masters first
   for (const v of vouchers) {
-    const entries = v["ALLLEDGERENTRIES.LIST"] as any[];
+    expect(v["@_OBJVIEW"]).toBe("Invoice Voucher View");
+    expect(v.ISINVOICE).toBe("Yes");
+    expect(v["ALLLEDGERENTRIES.LIST"]).toBeUndefined();
+    const entries = v["LEDGERENTRIES.LIST"] as any[];
     const total = entries.reduce((s, e) => s + Math.round(Number(e.AMOUNT) * 100), 0);
     expect(total).toBe(0);
     for (const e of entries) {
-      if (masters) expect(defined.has(String(e.LEDGERNAME))).toBe(true);
+      if (mastersExpected) expect(defined.has(String(e.LEDGERNAME))).toBe(true);
       expect(e.ISDEEMEDPOSITIVE).toBe(Number(e.AMOUNT) < 0 ? "Yes" : "No");
     }
   }
@@ -69,6 +72,13 @@ describe("invoicesToTallyXml", () => {
       ["Round Off", "Indirect Expenses"],
     ]);
     expect(r.xml).toContain("<PARENT>Duties &amp; Taxes</PARENT>");
+    expect(r.xml).toContain("<GSTDUTYHEAD>IGST</GSTDUTYHEAD>");
+    expect(r.xml).toContain("<APPLICABLEFROM>20260401</APPLICABLEFROM>");
+    // Split files for Tally versions that reject masters and vouchers together.
+    expect(r.mastersXml).not.toContain("<VOUCHER ");
+    expect(r.vouchersXml).not.toContain("<LEDGER ");
+    expect(XMLValidator.validate(r.mastersXml)).toBe(true);
+    expect(XMLValidator.validate(r.vouchersXml)).toBe(true);
   });
 
   it("intra-state: CGST + SGST, ledgers per rate, nil-rated ledger", () => {
@@ -83,7 +93,11 @@ describe("invoicesToTallyXml", () => {
       "Output SGST",
       "Round Off",
     ]);
-    expect(r.xml).toContain("<GSTDUTYHEAD>Central Tax</GSTDUTYHEAD>");
+    expect(r.xml).toContain("<GSTDUTYHEAD>CGST</GSTDUTYHEAD>");
+    expect(r.xml).toContain("<GSTDUTYHEAD>SGST/UTGST</GSTDUTYHEAD>");
+    const legacy = invoicesToTallyXml(make(intraStateInput()), { tallyVersion: "legacy" });
+    expect(legacy.xml).toContain("<GSTDUTYHEAD>Central Tax</GSTDUTYHEAD>");
+    expect(legacy.xml).toContain("<GSTDUTYHEAD>State Tax</GSTDUTYHEAD>");
     expect(r.xml).not.toContain("SVCURRENTCOMPANY");
   });
 
@@ -104,6 +118,7 @@ describe("invoicesToTallyXml", () => {
     expect(r.vouchers[0]?.entries[0]).toMatchObject({ ledger: "UT Supplier & Co", side: "Cr" });
     expect(vouchers[0].REFERENCEDATE).toBe(20261104);
     expect(vouchers[0].VOUCHERNUMBER).toBeUndefined();
+    expect(vouchers[0].BASICBUYERNAME).toBe("Us");
     expect(r.xml).toContain('NAME="UT Supplier &amp; Co"');
   });
 
@@ -134,12 +149,20 @@ describe("invoicesToTallyXml", () => {
         roundOff: "Rounding",
       },
     });
-    const { vouchers } = checkBooks(r.xml);
+    const { vouchers } = checkBooks(r.xml, false);
     expect(vouchers).toHaveLength(2);
-    expect(r.xml).not.toContain("All Masters");
+    expect(r.xml).not.toContain("<LEDGER ");
     expect(r.xml).toContain("<LEDGERNAME>IGST Payable</LEDGERNAME>");
     expect(r.xml).toContain("<LEDGERNAME>GST Sales 18</LEDGERNAME>");
     expect(r.xml).toContain("<LEDGERNAME>Rounding</LEDGERNAME>");
+  });
+
+  it("marks SEZ buyers", () => {
+    const input = intraStateInput();
+    input.buyer = { ...input.buyer, sez: true };
+    expect(invoicesToTallyXml(make(input)).xml).toContain(
+      "<GSTREGISTRATIONTYPE>Regular - SEZ</GSTREGISTRATIONTYPE>",
+    );
   });
 
   it("marks unregistered buyers and exports", () => {
@@ -152,6 +175,7 @@ describe("invoicesToTallyXml", () => {
     checkBooks(r.xml);
     expect(r.xml).toContain("<GSTREGISTRATIONTYPE>Unregistered/Consumer</GSTREGISTRATIONTYPE>");
     expect(r.xml).toContain("<COUNTRYOFRESIDENCE>Other Country</COUNTRYOFRESIDENCE>");
+    expect(r.xml).toContain("<COUNTRY>Other Country</COUNTRY>");
   });
 
   it("rejects an empty batch", () => {

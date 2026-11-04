@@ -205,6 +205,6 @@ exports[`invoicesToEWayBill > golden: goods lines only, with a threshold note 1`
       "vehicleType": "R",
     },
   ],
-  "version": "1.0.0618",
+  "version": "1.0.0621",
 }
 `;

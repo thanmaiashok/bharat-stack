@@ -213,10 +213,10 @@ describe("invoicesToEWayBill", () => {
 
 describe("schema validators and UQC", () => {
   it("explain what is wrong", () => {
-    const errs = validateEInvoiceSchema({ Version: "2.0", Extra: 1 });
+    const errs = validateEInvoiceSchema({ Version: "1.1.0000", Extra: 1 });
     const text = errs.map((e) => `${e.path} ${e.message}`).join("\n");
     expect(text).toContain("must have required property 'TranDtls'");
-    expect(text).toContain("must be equal to one of the allowed values: 1.1");
+    expect(text).toContain("must NOT have more than 6 characters");
     expect(text).toContain('must NOT have additional properties: "Extra"');
     expect(validateEWayBillSchema({ version: "1", billLists: [] }).length).toBeGreaterThan(0);
   });

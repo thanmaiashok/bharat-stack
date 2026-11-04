@@ -1,0 +1,123 @@
+{
+  "Version": "1.1",
+  "TranDtls": {
+    "TaxSch": "GST",
+    "SupTyp": "B2B",
+    "RegRev": "N",
+    "IgstOnIntra": "N"
+  },
+  "DocDtls": {
+    "Typ": "INV",
+    "No": "BS/2026-27/001",
+    "Dt": "04/11/2026"
+  },
+  "SellerDtls": {
+    "Gstin": "29QANCZ9267L1ZM",
+    "LglNm": "Demo Traders Private Limited",
+    "Addr1": "No. 12, 1st Cross, MG Road",
+    "Loc": "Bengaluru",
+    "Pin": 560001,
+    "Em": "accounts@example.com",
+    "Stcd": "29"
+  },
+  "BuyerDtls": {
+    "Gstin": "27TIHCN8643U1ZC",
+    "LglNm": "Sample Buyer LLP",
+    "Addr1": "Unit 4, Example Industrial Estate, Andheri East",
+    "Loc": "Mumbai",
+    "Pin": 400069,
+    "Pos": "27",
+    "Stcd": "27"
+  },
+  "ItemList": [
+    {
+      "SlNo": "1",
+      "PrdDesc": "Aluminium laptop stand, adjustable height",
+      "IsServc": "N",
+      "HsnCd": "8473",
+      "Qty": 2,
+      "Unit": "NOS",
+      "UnitPrice": 1499,
+      "TotAmt": 2998,
+      "Discount": 0,
+      "AssAmt": 2998,
+      "GstRt": 18,
+      "IgstAmt": 539.64,
+      "CgstAmt": 0,
+      "SgstAmt": 0,
+      "CesRt": 0,
+      "CesAmt": 0,
+      "CesNonAdvlAmt": 0,
+      "StateCesRt": 0,
+      "StateCesAmt": 0,
+      "StateCesNonAdvlAmt": 0,
+      "OthChrg": 0,
+      "TotItemVal": 3537.64
+    },
+    {
+      "SlNo": "2",
+      "PrdDesc": "USB-C to USB-C cable 1m",
+      "IsServc": "N",
+      "HsnCd": "8544",
+      "Qty": 5,
+      "Unit": "NOS",
+      "UnitPrice": 299.5,
+      "TotAmt": 1497.5,
+      "Discount": 149.75,
+      "AssAmt": 1347.75,
+      "GstRt": 18,
+      "IgstAmt": 242.6,
+      "CgstAmt": 0,
+      "SgstAmt": 0,
+      "CesRt": 0,
+      "CesAmt": 0,
+      "CesNonAdvlAmt": 0,
+      "StateCesRt": 0,
+      "StateCesAmt": 0,
+      "StateCesNonAdvlAmt": 0,
+      "OthChrg": 0,
+      "TotItemVal": 1590.35
+    },
+    {
+      "SlNo": "3",
+      "PrdDesc": "On-site setup service",
+      "IsServc": "Y",
+      "HsnCd": "998713",
+      "Qty": 1.5,
+      "Unit": "OTH",
+      "UnitPrice": 800,
+      "TotAmt": 1200,
+      "Discount": 0,
+      "AssAmt": 1200,
+      "GstRt": 18,
+      "IgstAmt": 216,
+      "CgstAmt": 0,
+      "SgstAmt": 0,
+      "CesRt": 0,
+      "CesAmt": 0,
+      "CesNonAdvlAmt": 0,
+      "StateCesRt": 0,
+      "StateCesAmt": 0,
+      "StateCesNonAdvlAmt": 0,
+      "OthChrg": 0,
+      "TotItemVal": 1416
+    }
+  ],
+  "ValDtls": {
+    "AssVal": 5545.75,
+    "CgstVal": 0,
+    "SgstVal": 0,
+    "IgstVal": 998.24,
+    "CesVal": 0,
+    "StCesVal": 0,
+    "Discount": 0,
+    "OthChrg": 0,
+    "RndOffAmt": 0.01,
+    "TotInvVal": 6544
+  },
+  "PayDtls": {
+    "Nm": "Demo Traders Pvt Ltd",
+    "AccDet": "000000000000",
+    "FinInsBr": "EXMP0000001"
+  }
+}

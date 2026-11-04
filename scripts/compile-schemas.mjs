@@ -12,14 +12,18 @@ const out = join(root, "src", "einvoice", "validators.generated.ts");
 
 export function generate() {
   const load = (f) => JSON.parse(readFileSync(join(root, "data", "schemas", f), "utf8"));
-  // unicode: false keeps maxLength checks free of Ajv runtime imports.
+  // unicode: false keeps maxLength checks free of Ajv runtime imports (Ajv prints a deprecation note; harmless).
   const ajv = new Ajv({
     code: { source: true, esm: true },
     allErrors: true,
     unicode: false,
     strict: true,
   });
-  ajv.addKeyword("x-source").addKeyword("x-last-verified").addKeyword("x-verification");
+  ajv
+    .addKeyword("x-source")
+    .addKeyword("x-secondary-source")
+    .addKeyword("x-last-verified")
+    .addKeyword("x-verification");
   ajv.addSchema(load("einvoice-1.1.schema.json"), "einvoice");
   ajv.addSchema(load("ewaybill-bulk.schema.json"), "ewaybill");
   const code = standaloneCode(ajv, { einvoice: "einvoice", ewaybill: "ewaybill" });
